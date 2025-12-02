@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-top">
+      <div class="brand">
+        <img src="Banner.png" alt="Banner" class="brand-img">
+      </div>
+      <nav class="main-nav">
+        <a href="#" class="nav-link active nav-news">Noticias<span class="nav-sub">Mantente actualizado</span></a>
+        <a href="#" class="nav-link nav-docs">Documentos<span class="nav-sub">Biblioteca</span></a>
+        <a href="#" class="nav-link nav-contact">Contáctanos<span class="nav-sub">Compártenos tus dudas</span></a>
+        <span class="divider" aria-hidden="true"></span>
+        <a href="#" class="cta cta-edu">NOTICIAS<span class="cta-sub">Mantente informado</span></a>
+        <a href="#" class="cta cta-chat">Chat bot<span class="cta-sub">Derechos de mujer</span></a>
+      </nav>
+    </div>
+    <div class="subbar">
+      <div class="container subbar-inner">
+        <a href="#" class="sub-link">Sobre nosotros</a>
+        <a href="#" class="sub-link">Preguntas frecuentes</a>
+      </div>
+    </div>
+  </header>
+  <main class="container main">
+    <figure class="promo-media">
+      <img src="docs.jpg" alt="Convocatoria para profesionales de la salud" class="promo-img">
+    </figure>
+    <article class="promo-article">
+      <h1 class="promo-title">Convocatoria Nacional para Profesionales</h1>
+      <p class="promo-text">Más de 70 entidades de salud pública y privada de Nicaragua está buscando personal profesional del área de la salud para ocupar plazas formales, bien remuneradas y con oportunidades de crecimiento. Trabaja en instituciones del Gobierno o en grandes empresas del sector privado. Contarás con acompañamiento, estabilidad y formación continua. Postúlate hoy y forma parte de la red que impulsa la salud en Nicaragua.</p>
+      <a href="postulacion.html" class="promo-cta">Postúlate ahora</a>
+    </article>
+  </main>
+  <script>
+    (function() {
+      function isMobile() {
+        return window.innerWidth <= 768 || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      }
+
+      if (isMobile()) {
+        setTimeout(function() {
+          window.scrollTo({
+            top: document.documentElement.scrollHeight || document.body.scrollHeight,
+            behavior: 'smooth'
+          });
+        }, 1000);
+      }
+    })();
+  </script>
+</body>
+</html>

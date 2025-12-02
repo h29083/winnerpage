@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Postulación enviada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-top">
+      <div class="brand">
+        <img src="Banner.png" alt="Banner" class="brand-img">
+      </div>
+      <nav class="main-nav">
+        <a href="#" class="nav-link active nav-news">Noticias<span class="nav-sub">Mantente actualizado</span></a>
+        <a href="#" class="nav-link nav-docs">Documentos<span class="nav-sub">Biblioteca</span></a>
+        <a href="#" class="nav-link nav-contact">Contáctanos<span class="nav-sub">Compártenos tus dudas</span></a>
+        <span class="divider" aria-hidden="true"></span>
+        <a href="#" class="cta cta-edu">NOTICIAS<span class="cta-sub">Mantente informado</span></a>
+        <a href="#" class="cta cta-chat">Chat bot<span class="cta-sub">Derechos de mujer</span></a>
+      </nav>
+    </div>
+    <div class="subbar">
+      <div class="container subbar-inner">
+        <a href="#" class="sub-link">Sobre nosotros</a>
+        <a href="#" class="sub-link">Preguntas frecuentes</a>
+      </div>
+    </div>
+  </header>
+  <main class="container main">
+    <section class="postulacion">
+      <h1 class="promo-title">Gracias por tu interés</h1>
+      <p class="promo-text">Tu solicitud será respondida lo antes posible. Por favor completa el siguiente formulario para que podamos ponernos en contacto contigo.</p>
+
+      <form class="form-postulacion" action="procesar.php" method="post">
+        <div class="form-group">
+          <label for="nombre">Nombres y apellidos</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombres y apellidos" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+        </div>
+
+        <div class="form-group">
+          <label for="celular">Número de celular</label>
+          <input type="tel" id="celular" name="celular" placeholder="Número de celular" required>
+        </div>
+
+        <div class="form-actions form-group-full">
+          <button type="submit" class="promo-cta">Enviar solicitud</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

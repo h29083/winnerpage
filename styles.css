@@ -1,0 +1,177 @@
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111}
+
+:root{
+  --container: 1200px;
+  --blue-600:#4db2e6;
+  --blue-700:#3aa0d6;
+  --gray-50:#f6f8fa;
+  --gray-100:#eef2f5;
+  --text:#111;
+  --muted:#6b7280;
+}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 16px}
+
+/* Header */
+.header{background:#fff}
+.header-top{display:flex;align-items:center;gap:24px;padding:18px 0}
+.brand-img{height:clamp(80px,12vw,120px);width:auto;display:block}
+
+.main-nav{display:flex;align-items:flex-start;gap:24px;flex:1;min-width:0}
+
+.nav-link{display:flex;flex-direction:column;justify-content:flex-start;gap:2px;line-height:1;text-decoration:none;color:var(--text);font-weight:800;text-transform:uppercase;letter-spacing:.3px}
+.nav-link .nav-sub{font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0;font-size:12px}
+.nav-link.active{color:#000}
+
+.divider{width:1px;background:#d7dde3;margin:0 8px}
+
+/* CTAs */
+.cta{display:flex;flex-direction:column;justify-content:center;align-self:center;text-decoration:none;padding:10px 16px;border-radius:2px;background:var(--blue-600);color:#fff;font-weight:800;text-transform:uppercase;white-space:nowrap}
+.cta:hover{background:var(--blue-700)}
+.cta .cta-sub{font-weight:600;text-transform:none;opacity:.95;font-size:12px}
+
+/* Subbar */
+.subbar{background:var(--gray-50);border-top:1px solid var(--gray-100);border-bottom:1px solid var(--gray-100)}
+.subbar-inner{display:flex;gap:32px;padding:10px 0}
+.sub-link{color:#111;text-decoration:none;font-weight:700;text-transform:uppercase;font-size:12px}
+.sub-link:hover{text-decoration:underline}
+
+/* Main placeholder */
+.main{padding:32px 0}
+
+/* Promo Article */
+.promo-media{margin:0 0 12px 0}
+.promo-img{display:block;width:100%;height:auto;border:1px solid var(--gray-100);border-radius:8px}
+.promo-article{background:#fff;border:1px solid var(--gray-100);padding:28px;border-radius:8px;margin-top:12px}
+.promo-title{margin:0 0 12px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Inter",sans-serif;font-weight:600;letter-spacing:-.2px;font-size:clamp(22px,2.6vw,36px);line-height:1.15;border-bottom:2px solid var(--gray-100);padding-bottom:8px}
+.promo-text{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Inter",sans-serif;color:#2b2f33;font-size:clamp(15px,1.25vw,19px);line-height:1.75;max-width:62ch}
+.promo-cta{display:inline-block;margin-top:16px;background:var(--blue-600);color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;padding:12px 20px;border-radius:0}
+.promo-cta:hover{background:var(--blue-700)}
+
+/* Formulario postulación */
+.postulacion{
+  max-width:900px;
+  margin:0 auto;
+  background:#fff;
+  border:1px solid var(--gray-100);
+  border-radius:8px;
+  padding:32px 32px 36px;
+}
+
+.form-postulacion{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px 32px;
+}
+
+.form-group label{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  color:#111;
+  margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid var(--gray-100);
+  border-radius:2px;
+  font-size:14px;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:#111;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+  color:var(--muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:var(--blue-600);
+  box-shadow:0 0 0 1px rgba(77,178,230,.2);
+}
+
+.form-group-full{
+  grid-column:1 / -1;
+}
+
+.form-actions{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.postulacion .promo-cta{
+  margin-top:0;
+  padding-inline:24px;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .brand-img{height:clamp(64px,14vw,96px)}
+  .main-nav{gap:16px}
+  .header-top{flex-direction:column;align-items:center;gap:12px}
+  .main-nav{flex-wrap:wrap;justify-content:center;width:100%}
+  .divider{display:none}
+  .nav-link{align-items:center;text-align:center}
+  .brand-img{margin:0 auto;height:clamp(56px,22vw,80px)}
+  .cta{align-self:center;align-items:center;text-align:center}
+  .cta-chat{display:none}
+  .nav-contact{display:none}
+  .nav-news, .nav-docs{display:none}
+  .cta-edu{width:100%;max-width:420px;padding-left:clamp(16px,6vw,28px);padding-right:clamp(16px,6vw,28px)}
+  .subbar-inner{justify-content:center;flex-wrap:wrap;gap:12px}
+  .sub-link{text-align:center}
+  .promo-article{text-align:left}
+  .promo-cta{width:100%;max-width:420px}
+  .promo-img{border-radius:6px}
+}
+@media (min-width: 980px){
+  /* Normalize first letter (remove drop cap) */
+  .promo-text::first-letter{
+    float:none;
+    font-family:inherit;
+    font-weight:inherit;
+    font-size:inherit;
+    line-height:inherit;
+    padding-right:0;
+    color:inherit;
+  }
+  /* Crop promo image vertically on desktop */
+  .promo-media{height:clamp(320px,36vh,440px);overflow:hidden;border-radius:8px}
+  .promo-img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+}
+@media (max-width: 760px){
+  .form-postulacion{
+    grid-template-columns:1fr;
+  }
+  .promo-title{
+    font-weight:700;
+    text-align:left;
+  }
+  .promo-text{
+    font-size:clamp(16px,4.2vw,20px);
+    line-height:1.6;
+    text-align:left;
+  }
+  .header-top{flex-direction:column;align-items:center;gap:12px}
+  .main-nav{flex-wrap:wrap;justify-content:center;width:100%}
+  .divider{display:none}
+  .nav-link{align-items:center;text-align:center}
+  .brand-img{margin:0 auto;height:clamp(56px,22vw,80px)}
+  .cta{align-self:center;align-items:center;text-align:center}
+  .cta-chat{display:none}
+  .nav-contact{display:none}
+  .nav-news, .nav-docs{display:none}
+  .cta-edu{width:100%;max-width:420px;padding-left:clamp(16px,6vw,28px);padding-right:clamp(16px,6vw,28px)}
+  .subbar-inner{justify-content:center;flex-wrap:wrap;gap:12px}
+  .sub-link{text-align:center}
+  .promo-article{text-align:center}
+  .promo-cta{width:100%;max-width:420px}
+  .promo-img{border-radius:6px}
+}
